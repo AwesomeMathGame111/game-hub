@@ -1,10 +1,11 @@
 const games = [
-
 {name:"Snake", file:"snake.html"},
 {name:"Tetris", file:"tetris.html"},
 {name:"Pong", file:"pong.html"},
 {name:"Breakout", file:"breakout.html"},
-{name:"Flappy Bird", file:"flappy.html"}
+{name:"Flappy Bird", file:"flappy.html"},
+{name:"2048", file:"2048.html"},
+{name:"Pacman", file:"pacman.html"}
 
 ];
 
