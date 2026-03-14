@@ -5,7 +5,7 @@ const games = [
 {name:"Cookie Clicker", file:"CookieClicker.html"},
 {name:"Flappy Bird", file:"flappy.html"},
 {name:"2048", file:"2048.html"},
-{name:"Pacman", file:"pacman.html"},
+{name:"Snow Rider 3D", file:"srdr3d.html"},
 {name:"Mario 64", file:"sm64.html"},
 {name:"Slope", file:"slope.html"}
 
