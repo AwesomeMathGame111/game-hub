@@ -9,14 +9,11 @@
 
 <body>
 
-<h1>🎮 My Game Hub</h1>
+<h1>🎮 Game Hub</h1>
 
-<div class="games">
+<input id="search" placeholder="Search games..." onkeyup="searchGames()">
 
-<button onclick="play('games/snake/index.html')">Snake</button>
-<button onclick="play('games/tetris/index.html')">Tetris</button>
-
-</div>
+<div id="games"></div>
 
 <iframe id="gameframe"></iframe>
 
