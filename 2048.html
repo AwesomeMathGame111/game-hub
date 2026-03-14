@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #faf8ef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            grid-gap: 10px;
+            background-color: #bbada0;
+            padding: 10px;
+            border-radius: 10px;
+            position: relative; /* For overlaying grid lines */
+            background-image: 
+                linear-gradient(to right, #8b7f7f 1px, transparent 1px), 
+                linear-gradient(to bottom, #8b7f7f 1px, transparent 1px);
+            background-size: 25% 25%; /* Adjust grid size to fit */
+            background-position: top left;
+        }
+        .tile {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            border-radius: 10px;
+            background-color: #ccc0b3;
+            color: #776e65;
+            position: relative;
+        }
+        .tile-2 { background-color: #eee4da; }
+        .tile-4 { background-color: #ece0c8; }
+        .tile-8 { background-color: #f2b179; }
+        .tile-16 { background-color: #f59563; }
+        .tile-32 { background-color: #f67c5f; }
+        .tile-64 { background-color: #f65e3b; }
+        .tile-128 { background-color: #edcf72; }
+        .tile-256 { background-color: #edcc61; }
+        .tile-512 { background-color: #edc850; }
+        .tile-1024 { background-color: #edc53f; }
+        .tile-2048 { background-color: #edc22e; }
+        .tile-empty { background-color: transparent; }
+
+        #gameOverMessage {
+            font-size: 36px;
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container" id="game">
+        <!-- The game grid will be populated dynamically -->
+    </div>
+    <div id="gameOverMessage"></div>
+
+    <script>
+        const boardSize = 4;
+        let board = [];
+        let gameContainer = document.getElementById('game');
+        let gameOverMessage = document.getElementById('gameOverMessage');
+        let gameOver = false;
+
+        function initializeBoard() {
+            board = Array.from({ length: boardSize }, () => Array(boardSize).fill(0));
+            renderBoard();
+            addRandomTile();
+            addRandomTile();
+            gameOver = false;
+            gameOverMessage.textContent = '';  // Clear any "Game Over" message
+        }
+
+        function renderBoard() {
+            gameContainer.innerHTML = '';
+            board.forEach(row => {
+                row.forEach(cell => {
+                    const tile = document.createElement('div');
+                    tile.classList.add('tile');
+                    if (cell !== 0) {
+                        tile.classList.add(`tile-${cell}`);
+                        tile.textContent = cell;
+                    } else {
+                        tile.classList.add('tile-empty');
+                    }
+                    gameContainer.appendChild(tile);
+                });
+            });
+        }
+
+        function addRandomTile() {
+            const emptyCells = [];
+            for (let row = 0; row < boardSize; row++) {
+                for (let col = 0; col < boardSize; col++) {
+                    if (board[row][col] === 0) emptyCells.push({ row, col });
+                }
+            }
+            if (emptyCells.length === 0) return;
+            const { row, col } = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+            board[row][col] = Math.random() < 0.9 ? 2 : 4;
+            renderBoard();
+        }
+
+        function moveLeft() {
+            for (let row = 0; row < boardSize; row++) {
+                let newRow = board[row].filter(value => value !== 0);
+                for (let i = 0; i < newRow.length - 1; i++) {
+                    if (newRow[i] === newRow[i + 1]) {
+                        newRow[i] *= 2;
+                        newRow[i + 1] = 0;
+                        i++;
+                    }
+                }
+                newRow = newRow.filter(value => value !== 0);
+                while (newRow.length < boardSize) newRow.push(0);
+                board[row] = newRow;
+            }
+            addRandomTile();
+        }
+
+        function moveRight() {
+            board.forEach((row, i) => {
+                board[i] = row.reverse();
+            });
+            moveLeft();
+            board.forEach((row, i) => {
+                board[i] = row.reverse();
+            });
+        }
+
+        function moveUp() {
+            board = rotateBoard(board);
+            moveLeft();
+            board = rotateBoard(board, true);
+        }
+
+        function moveDown() {
+            board = rotateBoard(board);
+            moveRight();
+            board = rotateBoard(board, true);
+        }
+
+        function rotateBoard(board, reverse = false) {
+            let newBoard = [];
+            for (let col = 0; col < boardSize; col++) {
+                let newRow = [];
+                for (let row = 0; row < boardSize; row++) {
+                    newRow.push(board[row][col]);
+                }
+                newBoard.push(newRow);
+            }
+            return reverse ? newBoard.reverse() : newBoard;
+        }
+
+        function handleKeyDown(event) {
+            if (gameOver) return;
+
+            if (event.key === 'ArrowLeft') moveLeft();
+            else if (event.key === 'ArrowRight') moveRight();
+            else if (event.key === 'ArrowDown') moveUp();   // Switch: Down key now moves up
+            else if (event.key === 'ArrowUp') moveDown();   // Switch: Up key now moves down
+            else if (event.key === 'Enter') restartGame();   // Restart the game when Enter is pressed
+
+            renderBoard();
+            checkGameOver();
+        }
+
+        function checkGameOver() {
+            for (let row = 0; row < boardSize; row++) {
+                for (let col = 0; col < boardSize; col++) {
+                    if (board[row][col] === 0) return; // Empty cell, game can continue
+                    if (col < boardSize - 1 && board[row][col] === board[row][col + 1]) return; // Merge right
+                    if (row < boardSize - 1 && board[row][col] === board[row + 1][col]) return; // Merge down
+                }
+            }
+            gameOver = true;
+            gameOverMessage.textContent = 'Game Over!';
+        }
+
+        function restartGame() {
+            console.log("Game Restarted!");
+            initializeBoard(); // Reset the game state and initialize the board again
+        }
+
+        document.addEventListener('keydown', handleKeyDown);
+        initializeBoard();
+    </script>
+</body>
+</html>
