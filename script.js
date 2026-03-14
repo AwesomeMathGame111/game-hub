@@ -1,7 +1,5 @@
-const home = [
-  {name: "Home", file:"home.html}
-  ];
 const games = [
+{name: "Home", file:"home.html"},
 {name:"Mario", file:"mario.html"},
 {name:"Tetris", file:"tetris.html"},
 {name:"Idle-Breakout", file:"Idle-Breakout.html"},
