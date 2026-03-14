@@ -1,11 +1,13 @@
 const games = [
-{name:"Snake", file:"snake.html"},
+{name:"Mario", file:"mario.html"},
 {name:"Tetris", file:"tetris.html"},
-{name:"Pong", file:"pong.html"},
-{name:"Breakout", file:"breakout.html"},
+{name:"Idle-Breakout", file:"Idle-Breakout.html"},
+{name:"Cookie Clicker", file:"CookieClicker.html"},
 {name:"Flappy Bird", file:"flappy.html"},
 {name:"2048", file:"2048.html"},
-{name:"Pacman", file:"pacman.html"}
+{name:"Pacman", file:"pacman.html"},
+{name:"Mario 64", file:"sm64.html"},
+{name:"Slope", file:"slope.html"}
 
 ];
 
