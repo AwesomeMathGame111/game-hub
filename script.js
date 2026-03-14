@@ -1,3 +1,6 @@
+const home = [
+  {name: "Home", file:"home.html}
+  ];
 const games = [
 {name:"Mario", file:"mario.html"},
 {name:"Tetris", file:"tetris.html"},
