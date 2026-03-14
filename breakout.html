@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body style="background:black;text-align:center">
+
+<canvas id="game" width="480" height="320"></canvas>
+
+<script>
+
+const canvas=document.getElementById("game");
+const ctx=canvas.getContext("2d");
+
+let x=240;
+let y=160;
+let dx=3;
+let dy=3;
+
+let paddleX=200;
+
+document.addEventListener("mousemove",e=>{
+paddleX=e.clientX-60;
+});
+
+function draw(){
+
+ctx.fillStyle="black";
+ctx.fillRect(0,0,480,320);
+
+ctx.beginPath();
+ctx.arc(x,y,10,0,Math.PI*2);
+ctx.fillStyle="white";
+ctx.fill();
+
+ctx.fillRect(paddleX,300,120,10);
+
+x+=dx;
+y+=dy;
+
+if(x<0||x>480)dx*=-1;
+if(y<0)dy*=-1;
+
+if(y>290 && x>paddleX && x<paddleX+120){
+dy*=-1;
+}
+
+}
+
+setInterval(draw,16);
+
+</script>
+</body>
+</html>
