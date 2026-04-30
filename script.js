@@ -7,7 +7,10 @@ const games = [
 {name:"2048", file:"2048.html"},
 {name:"Snow Rider 3D", file:"srd3d.html"},
 {name:"Mario 64", file:"sm64.html"},
-{name:"Slope", file:"slope.html"}
+{name:"Slope", file:"slope.html"},
+{name:"Retro Bowl", file:"retro-bowl.html"},
+{name:"OvO", file:"ovo.html"}
+
 
 ];
 
