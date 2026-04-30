@@ -10,7 +10,9 @@ const games = [
 {name:"Slope", file:"slope.html"},
 {name:"Retro Bowl", file:"retro-bowl.html"},
 {name:"OvO", file:"ovo.html"},
-{name:"FNAF", file:"fnaf.html"}
+{name:"FNAF", file:"fnaf.html"},
+{name:"Proxy", file:"proxy.html"}
+
 
 ];
 
