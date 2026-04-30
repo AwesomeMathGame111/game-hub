@@ -9,8 +9,8 @@ const games = [
 {name:"Mario 64", file:"sm64.html"},
 {name:"Slope", file:"slope.html"},
 {name:"Retro Bowl", file:"retro-bowl.html"},
-{name:"OvO", file:"ovo.html"}
-
+{name:"OvO", file:"ovo.html"},
+{name:"FNAF", file:"fnaf.html"}
 
 ];
 
