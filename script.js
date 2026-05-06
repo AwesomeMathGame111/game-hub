@@ -16,6 +16,8 @@ const games = [
 {name:"Drift Boss", file:"drift-boss.html"},
 {name:"Monkey Mart", file:"monkey-mart.html"},
 {name:"Emulator", file:"emulator.html"},
+{name:"Tanuki Sunset", file:"tanuki-sunset.html"},
+{name:"Baldi's Basics", file:"baldi.html"},
 
 
 ];
