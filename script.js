@@ -18,7 +18,7 @@ const games = [
 {name:"Emulator", file:"emulator.html"},
 {name:"Tanuki Sunset", file:"tanuki-sunset.html"},
 {name:"Baldi's Basics", file:"baldi.html"},
-  +
+{name:"IXL", file:"gn-math.html"},
 
 
 ];
