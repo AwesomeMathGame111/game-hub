@@ -11,7 +11,11 @@ const games = [
 {name:"Retro Bowl", file:"retro-bowl.html"},
 {name:"OvO", file:"ovo.html"},
 {name:"FNAF", file:"fnaf.html"},
-{name:"Proxy", file:"proxy.html"}
+{name:"Proxy", file:"proxy.html"},
+{name:"Pizza Tower", file:"pizza-tower.html"},
+{name:"Drift Boss", file:"drift-boss.html"},
+{name:"Monkey Mart", file:"monkey-mart.html"},
+{name:"Emulator", file:"emulator.html"},
 
 
 ];
