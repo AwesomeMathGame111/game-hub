@@ -19,6 +19,9 @@ const games = [
 {name:"Tanuki Sunset", file:"tanuki-sunset.html"},
 {name:"Baldi's Basics", file:"baldi.html"},
 {name:"IXL", file:"gn-math.html"},
+{name:"Pokemon Red", file:"pokemon-red.html"}
+{name:"Pokemon Blue", file:"pokemon-blue.html"}
+{name:"Pokemon Yellow", file:"pokemon-yellow.html"}
 
 
 ];
