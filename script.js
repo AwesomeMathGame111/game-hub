@@ -19,52 +19,47 @@ const games = [
 {name:"Tanuki Sunset", file:"tanuki-sunset.html"},
 {name:"Baldi's Basics", file:"baldi.html"},
 {name:"IXL", file:"gn-math.html"},
-{name:"Pokemon Red", file:"pokemon-red.html"}
-{name:"Pokemon Blue", file:"pokemon-blue.html"}
-{name:"Pokemon Yellow", file:"pokemon-yellow.html"}
+{name:"Pokemon Red", file:"pokemon-red.html"},
+{name:"Pokemon Blue", file:"pokemon-blue.html"},
+{name:"Pokemon Yellow", file:"pokemon-yellow.html"},
 
 
 ];
+function loadGames() {
+  const container = document.getElementById("games");
+  if (!container) return;
+  container.innerHTML = "";
 
-function loadGames(){
+  games.forEach(game => {
+    const div = document.createElement("div");
+    div.className = "game";
+    div.innerText = game.name;
 
-const container = document.getElementById("games");
-container.innerHTML = "";
+    div.onclick = () => {
+      const frame = document.getElementById("gameframe");
+      if (frame) {
+        frame.src = game.file;
+      }
+    };
 
-games.forEach(game => {
-
-const div = document.createElement("div");
-div.className = "game";
-div.innerText = game.name;
-
-div.onclick = () => {
-document.getElementById("gameframe").src = game.file;
-};
-
-container.appendChild(div);
-
-});
-
+    container.appendChild(div);
+  });
 }
 
-function searchGames(){
+function searchGames() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let gameButtons = document.getElementsByClassName("game");
 
-let input = document.getElementById("search").value.toLowerCase();
-let gameButtons = document.getElementsByClassName("game");
+  for (let i = 0; i < gameButtons.length; i++) {
+    let name = gameButtons[i].innerText.toLowerCase();
 
-for(let i=0;i<gameButtons.length;i++){
-
-let name = gameButtons[i].innerText.toLowerCase();
-
-if(name.includes(input)){
-gameButtons[i].style.display="block";
-}
-else{
-gameButtons[i].style.display="none";
-}
-
+    if (name.includes(input)) {
+      gameButtons[i].style.display = ""; // Restores default CSS layout style
+    } else {
+      gameButtons[i].style.display = "none";
+    }
+  }
 }
 
-}
-
-loadGames();
+// Run loadGames once the DOM content is fully loaded
+document.addEventListener("DOMContentLoaded", loadGames);
