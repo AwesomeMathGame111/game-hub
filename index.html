@@ -1,63 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudySync</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="https://google.com">
+<title>StudySync</title>
+<link rel="stylesheet" href="style.css">
+    <img alt="Favicon 48x48" src="https://www.google.com/s2/favicons?sz=48&amp;domain_url=https%3A%2F%2Fstudysync.com">
+
 </head>
 
 <body>
-    <!-- 1. The Launcher Button -->
-    <button onclick="launchCloakedSite()">Open in about:blank</button>
 
-    <script>
-    function launchCloakedSite() {
-        // Corrected string concatenation syntax (+ signs added)
-        const popup = window.open("about:blank", "_blank", "width=" + screen.width + ",height=" + screen.height);
-        
-        if (!popup) {
-            alert("Allow popups so the cloaker can work.");
-            return;
-        }
+<h1>🎮 Welcome to the AMG Game Hub</h1>
 
-        // Dynamically references 'main.html' where your actual game elements live
-        const dashboardUrl = window.location.origin + "/main.html";
-
-        popup.document.write(`
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <!-- Tab masks itself with the safe title and favicon -->
-                <title>StudySync</title>
-                <link rel="icon" type="image/png" href="https://google.com">
-                <style>
-                    body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
-                    iframe { width: 100%; height: 100%; border: none; }
-                </style>
-            </head>
-            <body>
-                <iframe src="${dashboardUrl}"></iframe>
-            </body>
-            </html>
-        `);
-        popup.document.close();
-        
-        // Optional: Redirect the original tab to something generic after opening
-        // window.location.replace("https://google.com");
-    }
-    </script>
-
-    <!-- 2. Landing page presentation markup -->
-    <h1>🎮 Welcome to the AMG Game Hub</h1>
-    <p>Select any game you desire to play! Additions will be a few times per week. NOTE: Super Mario 64 is CONTROLLER REQUIRED. Any questions? Join our discord! https://discord.com</p>
-    
-    <input id="search" placeholder="Search games..." onkeyup="searchGames()">
-    <div id="games"></div>
-    <iframe id="gameframe"></iframe>
-
-    <script src="script.js"></script>
+<p>Select any game you desire to play! Additions will be a few times per week. NOTE: Super Mario 64 is CONTROLLER REQUIRED. Any questions? Join our discord! https://discord.com/invite/WQA8DXaRPp</p>
+<input id="search" placeholder="Search games..." onkeyup="searchGames()">
+<div id="games"></div>
+<iframe id="gameframe"></iframe>
+<script src="script.js"></script>
 </body>
 </html>
