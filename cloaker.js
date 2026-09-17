@@ -7,7 +7,7 @@ iframe.style.width ='100%';
 iframe.style.height ='100%';
 iframe.style.margin ='0';
 iframe.style.padding ='0';
-iframe.src='https://moggedbyme7-maker.github.io/Test-of-embeds./index.html';
+iframe.src='https://awesomemathgame111.github.io/game-hub/index.html';
 myPopup.document.body.style.margin='0';
 myPopup.document.body.appendChild(iframe);
   }
