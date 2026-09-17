@@ -25,7 +25,7 @@ const games = [
 {name:"Geometry Dash Lite", file:"gd.html"},
 {name:"Yoshi's Island", file:"yoshis-island.html"},
 {name:"Plants Vs. Zombies 2", file:"pvz2.html"},
-
+{name:"Plants Vs. Zombies 1", file:"pvzmodded.html"},
 
 ];
 function loadGames() {
