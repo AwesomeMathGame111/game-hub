@@ -23,7 +23,8 @@ const games = [
 {name:"Pokemon Blue", file:"pokemon-blue.html"},
 {name:"Pokemon Yellow", file:"pokemon-yellow.html"},
 {name:"Geometry Dash Lite", file:"gd.html"},
-{name:"Yoshi's Island", file:"yoshis-island.html"}
+{name:"Yoshi's Island", file:"yoshis-island.html"},
+{name:"Plants Vs. Zombies 2", file:"pvz2.html"},
 
 
 ];
