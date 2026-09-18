@@ -30,6 +30,9 @@ const games = [
 {name:"FNAF 2", file:"fnaf2.html"},
 {name:"FNAF 3", file:"fnaf3.html"},
 {name:"Sonic Mania PLUS", file:"sonicmania.html"},
+{name:"Super Mario World", file:"smw.html"},
+{name:"New Super Mario Bros", file:"nsmb.html"},
+{name:"Minecraft", file:"mc.html"},
 ];
 function loadGames() {
   const container = document.getElementById("games");
