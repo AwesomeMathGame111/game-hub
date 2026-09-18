@@ -26,7 +26,10 @@ const games = [
 {name:"Yoshi's Island", file:"yoshis-island.html"},
 {name:"Plants Vs. Zombies 2", file:"pvz2.html"},
 {name:"Plants Vs. Zombies 1", file:"pvzmodded.html"},
-
+{name:"Room Clicker", file:"room-clicker.html"},
+{name:"FNAF 2", file:"fnaf2.html"},
+{name:"FNAF 3", file:"fnaf3.html"},
+{name:"Sonic Mania PLUS", file:"sonicmania.html"},
 ];
 function loadGames() {
   const container = document.getElementById("games");
