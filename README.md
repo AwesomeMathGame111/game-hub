@@ -3,3 +3,5 @@ Specifically made for Awesome Math Games as a secret hideout for our games. No g
 # SPECIAL THANKS TO CONTRIBUTORS!
 @Cannotbeblankt
 @Moggedbyme7-maker
+# Credits to Ultimate Game Stash!
+they lowkey goated for html games, check them out! 
