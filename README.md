@@ -1,5 +1,5 @@
 # game-hub
-Specifically made for Awesome Math Games as a secret hideout for our games. No games will get blocked so we are basically good. We will post this to Replit, however it won't be up for long due to credits, but we'll make sure we are not blocked at all with any other blocker. This will be promoted on our github site. Fork if you want to, just credit us. 
+Specifically made for Awesome Math Games as a secret hideout for our games in the event of our main site being blocked. No games will get blocked, since all games are in HTML format and not in static viewing format, so we are basically good. We will post this to Replit, however it won't be up for long due to credits, but we'll make sure to keep deploying this on various websites so it'll work and not be blocked by your schools content filter. This will be promoted on our main Google Site. Fork if you want to, just credit us please. 
 # SECURLY USERS
 We'll deploy this to Vercel, as Vercel websites are most of the time not blocked, we'll make at most 5 to 6 deploys of the site, plus we'll try and get our Replit app version back up again as it's not blocked on Securly. 
 # GOGUARDIAN USERS
