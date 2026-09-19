@@ -33,6 +33,7 @@ const games = [
 {name:"Super Mario World", file:"smw.html"},
 {name:"New Super Mario Bros", file:"nsmb.html"},
 {name:"Minecraft", file:"mc.html"},
+{name:"Sonic CD", file:"soniccd.html"},
 ];
 function loadGames() {
   const container = document.getElementById("games");
