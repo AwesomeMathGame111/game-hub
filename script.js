@@ -35,6 +35,7 @@ const games = [
 {name:"Minecraft", file:"mc.html"},
 {name:"Sonic CD", file:"soniccd.html"},
 {name:"Saul Goodman Runners", file:"goodman.html"},
+{name:"Prodigy", file:"prodigy.html"},
 ];
 function loadGames() {
   const container = document.getElementById("games");
